@@ -18,6 +18,7 @@ gitbook install
 ```
 # 使い方  
 #### ビルド  
+カレントディレクトリの.mdをHTML変換しdocs配下に出力
 ```
-gitbook build  
+gitbook build ./ docs/ 
 ```
