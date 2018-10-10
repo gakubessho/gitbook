@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>セットアップ · GitBook</title>
+        <title>LaravelMix · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -59,6 +59,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    
+    <link rel="prev" href="database.html" />
     
 
     </head>
@@ -176,11 +178,69 @@
                 <span>
             
                     
-                    Laravel初期環境構築
+                    Laravel
             
                 </span>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="initial_installation.html">
+            
+                <a href="initial_installation.html">
+            
+                    
+                    初期環境構築
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    初期設定
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    Database設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="laravelmix.html">
+            
+                <a href="laravelmix.html">
+            
+                    
+                    LaravelMix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -189,105 +249,47 @@
                 <span>
             
                     
-                    Laravel初期設定
+                    デプロイ
             
                 </span>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../deploy/manual_dep.html">
+            
+                <a href="../deploy/manual_dep.html">
+            
+                    
+                    手動本番デプロイ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../deploy/auto_dep.html">
+            
+                <a href="../deploy/auto_dep.html">
+            
+                    
+                    自動本番デプロイ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
         <li class="chapter " data-level="1.6" >
-            
-                <span>
-            
-                    
-                    Database設定
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.7" >
-            
-                <span>
-            
-                    
-                    LaravelMix
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.8" >
-            
-                <span>
-            
-                    
-                    本番環境手動デプロイ
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter active" data-level="1.8.1" data-path="setup.html">
-            
-                <a href="setup.html">
-            
-                    
-                    セットアップ
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.9" >
-            
-                <span>
-            
-                    
-                    本番環境自動デプロイ
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.9.1" data-path="../auto_deploy/setup.html">
-            
-                <a href="../auto_deploy/setup.html">
-            
-                    
-                    セットアップ
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.10" >
             
                 <span>
             
@@ -330,7 +332,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >セットアップ</a>
+        <a href="../.." >LaravelMix</a>
     </h1>
 </div>
 
@@ -345,24 +347,35 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="git&#x304B;&#x3089;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x30AF;&#x30ED;&#x30FC;&#x30F3;">git&#x304B;&#x3089;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x30AF;&#x30ED;&#x30FC;&#x30F3;</h4>
-<pre><code>cd  /mnt/data/laravel
-git clone https://github.com/AMkabi/front_app.git
-</code></pre><h4 id="env&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4F5C;&#x6210;">env&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4F5C;&#x6210;</h4>
-<pre><code>#.env.example&#x306E;&#x5185;&#x5BB9;&#x3092;&#x30B3;&#x30D4;&#x30FC;
-cp .env.example .env
+                                <h1 id="laravelmix&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">LaravelMix&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h1>
+<pre><code>vagrant up
+vagrant ssh
+#laravel&#x30EB;&#x30FC;&#x30C8;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x306B;&#x79FB;&#x52D5;
+cd /home/vagrant/code/laravel
 
-#&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x6BCE;&#x306B;.env&#x306E;&#x5FC5;&#x8981;&#x7B87;&#x6240;&#x3092;&#x4FEE;&#x6B63;
-DB_HOST = { &#xFF24;&#xFF22;&#x306E;&#x30DB;&#x30B9;&#x30C8;&#x540D; }
-DB_DATABASE = { &#xFF24;&#xFF22;&#x540D; }
-DB_USERNAME = { &#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x540D; }
-DB_PASSWORD = { &#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9; }
-</code></pre><h4 id="&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30AD;&#x30FC;&#x751F;&#x6210;">&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30AD;&#x30FC;&#x751F;&#x6210;</h4>
-<pre><code>php artisan key:generate
-</code></pre><h4 id="&#x30B7;&#x30F3;&#x30DC;&#x30EA;&#x30C3;&#x30AF;&#x30EA;&#x30F3;&#x30AF;">&#x30B7;&#x30F3;&#x30DC;&#x30EA;&#x30C3;&#x30AF;&#x30EA;&#x30F3;&#x30AF;</h4>
-<pre><code>ln -s /mnt/data/laravel/front_app/public  frontapp
-</code></pre><h4 id="apache&#x518D;&#x8D77;&#x52D5;">apache&#x518D;&#x8D77;&#x52D5;</h4>
-<pre><code>sudo systemctl restart httpd
+#laravel mix&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;
+npm install --no-optional
+</code></pre><h1 id="laravelmix&#x6A5F;&#x80FD;">Laravelmix&#x6A5F;&#x80FD;</h1>
+<h4 id="&#x30D3;&#x30EB;&#x30C9;">&#x30D3;&#x30EB;&#x30C9;</h4>
+<p>&#x30BF;&#x30B9;&#x30AF;&#x306E;&#x5B9F;&#x884C;
+{code}
+npm run dev
+{/code}</p>
+<h4 id="watch">Watch</h4>
+<p>&#x5BFE;&#x8C61;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x76E3;&#x8996;&#x3057;&#x5909;&#x66F4;&#x304C;&#x3042;&#x308C;&#x3070;&#x5909;&#x66F4;&#x306E;&#x3042;&#x3063;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;</p>
+<pre><code>npm run watch
+</code></pre><h4 id="hot">hot</h4>
+<p>HMR(Hot Module Replacement)&#x306E;&#x5B9F;&#x884C;</p>
+<pre><code>npm run hot
+</code></pre><h4 id="browsersync">BrowserSync</h4>
+<pre><code>.browserSync();
+</code></pre><h4 id="&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x30D0;&#x30B9;&#x30C6;&#x30A3;&#x30F3;&#x30B0;">&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x30D0;&#x30B9;&#x30C6;&#x30A3;&#x30F3;&#x30B0;</h4>
+<p>&#x81EA;&#x52D5;&#x7684;&#x306B;&#x5168;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;&#x3078;&#x4E00;&#x610F;&#x306E;&#x30CF;&#x30C3;&#x30B7;&#x30E5;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3001;&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;&#x3092;&#x66F4;&#x65B0;&#x3067;&#x304D;&#x308B;
+&#x305F;&#x3060;&#x3057;&#x5B9F;&#x969B;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;&#x304C;&#x4E0D;&#x660E;&#x306B;&#x306A;&#x308B;&#x305F;&#x3081;&#x3001;&#x30D3;&#x30E5;&#x30FC;&#x4E2D;&#x3067;Laravel&#x306E;&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;mix&#x95A2;&#x6570;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;</p>
+<pre><code>.version();
+</code></pre><h4 id="sourcemap">SourceMap</h4>
+<p>&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x306E;&#x958B;&#x767A;&#x30C4;&#x30FC;&#x30EB;&#x5411;&#x3051;&#x306E;&#x8FFD;&#x52A0;&#x30C7;&#x30D0;&#x30C3;&#x30B0;&#x60C5;&#x5831;&#x3092;&#x63D0;&#x4F9B;</p>
+<pre><code>.sourceMaps();
 </code></pre>
                                 
                                 </section>
@@ -390,6 +403,10 @@ DB_PASSWORD = { &#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9; }
 
             
                 
+                <a href="database.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Database設定">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
                 
             
         
@@ -398,7 +415,7 @@ DB_PASSWORD = { &#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9; }
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"セットアップ","level":"1.8.1","depth":2,"next":{"title":"本番環境自動デプロイ","level":"1.9","depth":1,"ref":"","articles":[{"title":"セットアップ","level":"1.9.1","depth":2,"path":"contents/auto_deploy/setup.md","ref":"contents/auto_deploy/setup.md","articles":[]}]},"previous":{"title":"本番環境手動デプロイ","level":"1.8","depth":1,"ref":"","articles":[{"title":"セットアップ","level":"1.8.1","depth":2,"path":"contents/manual_deploy/setup.md","ref":"contents/manual_deploy/setup.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"contents/manual_deploy/setup.md","mtime":"2018-10-03T15:43:06.541Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-03T15:52:54.400Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"LaravelMix","level":"1.4.4","depth":2,"next":{"title":"デプロイ","level":"1.5","depth":1,"ref":"","articles":[{"title":"手動本番デプロイ","level":"1.5.1","depth":2,"path":"contents/deploy/manual_dep.md","ref":"contents/deploy/manual_dep.md","articles":[]},{"title":"自動本番デプロイ","level":"1.5.2","depth":2,"path":"contents/deploy/auto_dep.md","ref":"contents/deploy/auto_dep.md","articles":[]}]},"previous":{"title":"Database設定","level":"1.4.3","depth":2,"path":"contents/laravel/database.md","ref":"contents/laravel/database.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"contents/laravel/laravelmix.md","mtime":"2018-10-10T01:17:38.509Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-10T04:50:21.078Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
