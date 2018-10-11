@@ -178,3 +178,37 @@ php -f trigger.php
 
 エラーログ
 * deplpy/logs/hook-error.logに出力
+
+# github設定
+[参考](https://yosiakatsuki.net/blog/github-auto-deploy/)
+
+#### SSHキーの作成
+```
+ssh-keygen -t rsa
+```
+/.ssh/id_rsa.pubが作成される
+
+#### githubにssh登録
+account > Settings > SSH and GPG keys > New SSH key  
+titleと先ほどのid_rsa.pubを登録  
+<br>
+<img width="600" alt="ssh_key" src="../../images/ssh_key.PNG">
+<br><br>
+接続確認
+```
+ssh -T git@github.com
+//「Hi xxxx! You've successfully ~~」が帰ってくればOK
+```
+
+#### webhooks設定
+project > Settings > Webhooks  > Add webhook
+
+|項目|内容|
+|--:|--:|
+|Payload URL|http://52.198.40.200/deploy/trigger.php|
+|Content type|application/json|
+|Secret|trigger.phpの$SECRET_KEY|
+|event trigger|Just push event|
+|active|on|
+<br>
+<img width="600" alt="webhooks" src="../../images/webhooks.PNG">

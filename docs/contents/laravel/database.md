@@ -71,4 +71,4 @@ php artisan migrate
 
 
 <br>  
-<img width="600" alt="キャンプ" src="../../images/workbench.PNG">
+<img width="600" alt="workbench" src="../../images/workbench.PNG">

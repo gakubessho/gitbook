@@ -510,6 +510,52 @@ envoy run deploy --on=localhost
 <ul>
 <li>deplpy/logs/hook-error.log&#x306B;&#x51FA;&#x529B;</li>
 </ul>
+<h1 id="github&#x8A2D;&#x5B9A;">github&#x8A2D;&#x5B9A;</h1>
+<p><a href="https://yosiakatsuki.net/blog/github-auto-deploy/" target="_blank">&#x53C2;&#x8003;</a></p>
+<h4 id="ssh&#x30AD;&#x30FC;&#x306E;&#x4F5C;&#x6210;">SSH&#x30AD;&#x30FC;&#x306E;&#x4F5C;&#x6210;</h4>
+<pre><code>ssh-keygen -t rsa
+</code></pre><p>/.ssh/id_rsa.pub&#x304C;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x308B;</p>
+<h4 id="github&#x306B;ssh&#x767B;&#x9332;">github&#x306B;ssh&#x767B;&#x9332;</h4>
+<p>account &gt; Settings &gt; SSH and GPG keys &gt; New SSH key<br>title&#x3068;&#x5148;&#x307B;&#x3069;&#x306E;id_rsa.pub&#x3092;&#x767B;&#x9332;<br><br>
+<img width="600" alt="ssh_key" src="../../images/ssh_key.PNG">
+<br><br>
+&#x63A5;&#x7D9A;&#x78BA;&#x8A8D;</p>
+<pre><code>ssh -T git@github.com
+//&#x300C;Hi xxxx! You&apos;ve successfully ~~&#x300D;&#x304C;&#x5E30;&#x3063;&#x3066;&#x304F;&#x308C;&#x3070;OK
+</code></pre><h4 id="webhooks&#x8A2D;&#x5B9A;">webhooks&#x8A2D;&#x5B9A;</h4>
+<p>project &gt; Settings &gt; Webhooks  &gt; Add webhook</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">&#x9805;&#x76EE;</th>
+<th style="text-align:right">&#x5185;&#x5BB9;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">Payload URL</td>
+<td style="text-align:right"><a href="http://52.198.40.200/deploy/trigger.php" target="_blank">http://52.198.40.200/deploy/trigger.php</a></td>
+</tr>
+<tr>
+<td style="text-align:right">Content type</td>
+<td style="text-align:right">application/json</td>
+</tr>
+<tr>
+<td style="text-align:right">Secret</td>
+<td style="text-align:right">trigger.php&#x306E;$SECRET_KEY</td>
+</tr>
+<tr>
+<td style="text-align:right">event trigger</td>
+<td style="text-align:right">Just push event</td>
+</tr>
+<tr>
+<td style="text-align:right">active</td>
+<td style="text-align:right">on</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+<img width="600" alt="webhooks" src="../../images/webhooks.PNG"></p>
 
                                 
                                 </section>
@@ -549,7 +595,7 @@ envoy run deploy --on=localhost
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"自動本番デプロイ","level":"1.5.2","depth":2,"previous":{"title":"手動本番デプロイ","level":"1.5.1","depth":2,"path":"contents/deploy/manual_dep.md","ref":"contents/deploy/manual_dep.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"contents/deploy/auto_dep.md","mtime":"2018-10-10T15:34:01.473Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-11T10:55:15.967Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"自動本番デプロイ","level":"1.5.2","depth":2,"previous":{"title":"手動本番デプロイ","level":"1.5.1","depth":2,"path":"contents/deploy/manual_dep.md","ref":"contents/deploy/manual_dep.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"contents/deploy/auto_dep.md","mtime":"2018-10-11T11:49:12.618Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-11T11:50:26.307Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
