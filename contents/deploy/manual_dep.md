@@ -16,6 +16,12 @@ DB_USERNAME = { ユーザー名 }
 DB_PASSWORD = { パスワード }
 ```
 
+#### comoser update
+vendorディレクトリがないため
+```
+composer update
+```
+
 #### アプリケーションキー生成
 ```
 php artisan key:generate

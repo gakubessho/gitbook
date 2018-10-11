@@ -12,9 +12,9 @@ npm install --no-optional
 # Laravelmix機能
 #### ビルド
 タスクの実行
-{code}
+```
 npm run dev
-{/code}
+```
 
 #### Watch
 対象ファイルを監視し変更があれば変更のあったファイルをコンパイル

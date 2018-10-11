@@ -5,10 +5,11 @@
     * [マークダウン記法](contents/document/markdown.md)
 * Laravel
     * [初期環境構築](contents/laravel/initial_installation.md)   
-    * 初期設定
+    * [基本設定](contents/laravel/setting.md)
     * [Database設定](contents/laravel/database.md)  
     * [LaravelMix](contents/laravel/laravelmix.md)
+    * [api](contents/laravel/api.md)
+    * Tips
 * デプロイ
     * [手動本番デプロイ](contents/deploy/manual_dep.md)  
     * [自動本番デプロイ](contents/deploy/auto_dep.md)
-* Laravel Tips  
