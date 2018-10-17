@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>api · GitBook</title>
+        <title>php · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -60,8 +60,6 @@
 
     
     
-    <link rel="prev" href="laravelmix.html" />
-    
 
     </head>
     <body>
@@ -116,9 +114,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../debug/php.html">
+        <li class="chapter active" data-level="1.2.1" data-path="php.html">
             
-                <a href="../debug/php.html">
+                <a href="php.html">
             
                     
                     php
@@ -219,9 +217,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="initial_installation.html">
+        <li class="chapter " data-level="1.5.1" data-path="../laravel/initial_installation.html">
             
-                <a href="initial_installation.html">
+                <a href="../laravel/initial_installation.html">
             
                     
                     初期環境構築
@@ -232,9 +230,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="setting.html">
+        <li class="chapter " data-level="1.5.2" data-path="../laravel/setting.html">
             
-                <a href="setting.html">
+                <a href="../laravel/setting.html">
             
                     
                     基本設定
@@ -245,9 +243,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="database.html">
+        <li class="chapter " data-level="1.5.3" data-path="../laravel/database.html">
             
-                <a href="database.html">
+                <a href="../laravel/database.html">
             
                     
                     Database設定
@@ -258,9 +256,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="laravelmix.html">
+        <li class="chapter " data-level="1.5.4" data-path="../laravel/laravelmix.html">
             
-                <a href="laravelmix.html">
+                <a href="../laravel/laravelmix.html">
             
                     
                     LaravelMix
@@ -271,9 +269,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.5" data-path="api.html">
+        <li class="chapter " data-level="1.5.5" data-path="../laravel/api.html">
             
-                <a href="api.html">
+                <a href="../laravel/api.html">
             
                     
                     api
@@ -377,7 +375,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >api</a>
+        <a href="../.." >php</a>
     </h1>
 </div>
 
@@ -392,11 +390,55 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="api&#x8A8D;&#x8A3C;">api&#x8A8D;&#x8A3C;</h4>
-<pre><code>composer require laravel/passport
-php artisan migrate
-php artisan passport:install
+                                <h1 id="&#x6982;&#x8981;">&#x6982;&#x8981;</h1>
+<p>VSCode + vagrant(Homestead) + xdebug&#x3067;php&#x306E;&#x30C7;&#x30D0;&#x30C3;&#x30B0;&#x74B0;&#x5883;&#x3092;&#x4F5C;&#x308B;</p>
+<h1 id="&#x524D;&#x63D0;">&#x524D;&#x63D0;</h1>
+<p>&#x30FB;vscode&#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;<br>&#x30FB;vagrant&#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;<br>&#x30FB;homestead&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;laravel&#x306E;&#x74B0;&#x5883;&#x69CB;&#x7BC9;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;  </p>
+<h1 id="&#x624B;&#x9806;">&#x624B;&#x9806;</h1>
+<h4 id="vagrant&#x7ACB;&#x3061;&#x4E0A;&#x3052;">vagrant&#x7ACB;&#x3061;&#x4E0A;&#x3052;</h4>
+<pre><code>vagrant up 
+vagrant ssh
+</code></pre><h4 id="xdebugini&#x4FEE;&#x6B63;">xdebug.ini&#x4FEE;&#x6B63;</h4>
+<pre><code>sudo vi /etc/php/7.2/fpm/conf.d/20-xdebug.ini
+</code></pre><p>&#x4E0B;&#x8A18;&#x5185;&#x5BB9;&#x306B;&#x4FEE;&#x6B63;</p>
+<pre><code>zend_extension=xdebug.so
+xdebug.remote_enable = 1
+#xdebug.remote_connect_back = 1
+xdebug.remote_port = 9000
+#xdebug.max_nesting_level = 512
+xdebug.remote_host=10.0.2.2
+xdebug.remote_autostart = 1
+</code></pre><h4 id="&#x5FF5;&#x306E;&#x305F;&#x3081;&#x30EA;&#x30ED;&#x30FC;&#x30C9;">&#x5FF5;&#x306E;&#x305F;&#x3081;&#x30EA;&#x30ED;&#x30FC;&#x30C9;</h4>
+<pre><code>vagrant reload
+</code></pre><h3 id="vscode&#x8A2D;&#x5B9A;">VSCode&#x8A2D;&#x5B9A;</h3>
+<h4 id="php-debug&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">php debug&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h4>
+<p>&#x62E1;&#x5F35;&#x6A5F;&#x80FD;&#x304B;&#x3089;&#x300C;php debug&#x300D;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</p>
+<p><img width="600" alt="vscode_phpdebug" src="../../images/vscode_phpdebug.PNG">
+<br></p>
+<h4 id="launchjson&#x5909;&#x66F4;">launch.json&#x5909;&#x66F4;</h4>
+<p>&#x203B;pathMappings&#x306B;&#x3064;&#x3044;&#x3066;&#x306F;&#x74B0;&#x5883;&#x306B;&#x5408;&#x308F;&#x305B;&#x3066;&#x9069;&#x5B9C;&#x5909;&#x66F4;  </p>
+<pre><code class="lang-json">    <span class="hljs-string">&quot;configurations&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Homestead&quot;</span>,
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;php&quot;</span>,
+            <span class="hljs-string">&quot;request&quot;</span>: <span class="hljs-string">&quot;launch&quot;</span>,
+            <span class="hljs-string">&quot;port&quot;</span>: <span class="hljs-number">9000</span>,
+            <span class="hljs-string">&quot;pathMappings&quot;</span>: {
+                <span class="hljs-string">&quot;/home/vagrant/code/laravel&quot;</span>: <span class="hljs-string">&quot;${workspaceRoot}&quot;</span>
+            }
+        },
+        {
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Launch currently open script&quot;</span>,
+            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;php&quot;</span>,
+            <span class="hljs-string">&quot;request&quot;</span>: <span class="hljs-string">&quot;launch&quot;</span>,
+            <span class="hljs-string">&quot;program&quot;</span>: <span class="hljs-string">&quot;${file}&quot;</span>,
+            <span class="hljs-string">&quot;cwd&quot;</span>: <span class="hljs-string">&quot;${fileDirname}&quot;</span>,
+            <span class="hljs-string">&quot;port&quot;</span>: <span class="hljs-number">9000</span>
+        }
+    ]
 </code></pre>
+<p><img width="600" alt="vscode_launchjson" src="../../images/vscode_launchjson.PNG"></p>
+
                                 
                                 </section>
                             
@@ -423,10 +465,6 @@ php artisan passport:install
 
             
                 
-                <a href="laravelmix.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: LaravelMix">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
                 
             
         
@@ -435,7 +473,7 @@ php artisan passport:install
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"api","level":"1.5.5","depth":2,"next":{"title":"Tips","level":"1.5.6","depth":2,"ref":"","articles":[]},"previous":{"title":"LaravelMix","level":"1.5.4","depth":2,"path":"contents/laravel/laravelmix.md","ref":"contents/laravel/laravelmix.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"contents/laravel/api.md","mtime":"2018-10-17T09:21:39.463Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-17T10:58:10.356Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"php","level":"1.2.1","depth":2,"next":{"title":"ソース管理","level":"1.3","depth":1,"ref":"","articles":[]},"previous":{"title":"debug","level":"1.2","depth":1,"ref":"","articles":[{"title":"php","level":"1.2.1","depth":2,"path":"contents/debug/php.md","ref":"contents/debug/php.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"contents/debug/php.md","mtime":"2018-10-17T09:42:08.005Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-17T10:58:10.356Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
